@@ -43,6 +43,21 @@ requests = {
             </server>
         """
         },
+    "rollback/abort": {
+        "name": "Rollback/Abort",
+        "template": 
+        """
+            <server>
+                <requests>
+                    <Session.loginRq userName="admin" password="admin" />
+                    <OnlineData.loadPolicyRq policyID="865010" />
+                    <Session.getElementRq path="//policyAdmin/transactions/transaction[last()]/HistoryID" var.lastHistoryID="@value"/>
+                    <TransACT.rollbackTransactionRq historyID="~lastHistoryID~" />
+                    <TransACT.abortTransactionRq historyID="~lastHistoryID~" allowCheckoutOverride="1" />
+                </requests>
+            </server>
+        """
+        },
     "load_config": {
         "name": "Load Config",
         "template": 
