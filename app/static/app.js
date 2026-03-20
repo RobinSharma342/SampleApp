@@ -16,7 +16,7 @@ function copyCode(sectionID) {
     document.body.removeChild(textArea);
     
     // Provide feedback to the user
-    showNotification("Code copied to clipboard!");
+    showNotification("Copied to clipboard!");
 }
 
 function showNotification(message) {

@@ -15,6 +15,21 @@ requests = {
             </server>
         """
         },
+    "manuscript_get_value": {
+        "name": "Manuscript Get Value",
+        "template": 
+        """
+            <server>
+                <requests>
+                    <Session.loginRq userName="admin" password="admin" />
+                    <OnlineData.loadPolicyRq policyID="2" />
+                    <OnlineData.loadHistoryRq historyID="2" var.manuScriptID = "@manuScriptID" />
+                    <ManuScript.getValueRq field="data.TotalResult" manuscript="~manuScriptID~" />
+                    <Session.closeRq />
+                </requests>
+            </server>
+        """
+        },
     "load_config": {
         "name": "Load Config",
         "template": 
