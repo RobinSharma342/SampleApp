@@ -1,0 +1,23 @@
+# Python cache and compiled bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# VS Code workspace settings
+.vscode/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+*$py.class

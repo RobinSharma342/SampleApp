@@ -1,6 +1,6 @@
 import requests
 
-addresses = {
+ADDRESSES = {
     "AL": {
         "street_name": "Main St",
         "city_name": "Montgomery",
@@ -260,7 +260,7 @@ def get_random_street_name(state):
         data = response.json()
         number = data['results'][0]['location']['street']['number']
         name = data['results'][0]['location']['street']['name']
-        return f"{number} {name} {addresses[state]['city_name']} {state}, {addresses[state]['zip_code']}"
+        return f"{number} {name} {ADDRESSES[state]['city_name']} {state}, {ADDRESSES[state]['zip_code']}"
     else:
         return "Unknown Street"
     
