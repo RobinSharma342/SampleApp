@@ -10,6 +10,7 @@ requests = {
                     <Session.loginRq userName="admin" password="admin" />
                     <OnlineData.loadPolicyRq policyID="2" />
                     <OnlineData.loadHistoryRq historyID="2" />
+                    <Session.getDocumentRq />
                     <Session.closeRq />
                 </requests>
             </server>
@@ -26,6 +27,18 @@ requests = {
                     <OnlineData.loadHistoryRq historyID="2" var.manuScriptID = "@manuScriptID" />
                     <ManuScript.getValueRq field="data.TotalResult" manuscript="~manuScriptID~" />
                     <Session.closeRq />
+                </requests>
+            </server>
+        """
+        },
+    "get_session": {
+        "name": "Get Session",
+        "template": 
+        """
+            <server>
+                <requests>
+                    <Session.resumeRq sessionID="7977960C:76B74042:ADC860EB:32FD8D0D:7A35FE0D:48E90C4C" />
+                    <Session.getDocumentRq />
                 </requests>
             </server>
         """
